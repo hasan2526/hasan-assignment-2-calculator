@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Impact, Cambria, Cochin, Georgia, Times, 'Times New Roman',;
+  font-weight: normal;
+}
+
+h1{
+  text-align: center;
+  font-size: 1.5cm;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.2cm;
+}
+h2{
+  text-align: center;
+  font-size: 1cm;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.3cm;
+}
+h3{
+  text-align: center;
+  font-size: 1cm;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.5cm;
+}
+h4{
+  text-align: center;
+  font-size: 0.7cm;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 0.1cm;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(182, 184, 147), rgb(33, 95, 57));
+  }
+
+  .calculator-grid {
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    }
+
+    .calculator-grid > button {
+      cursor: pointer;
+      font-size: 2.5rem;
+      border: 10pt;
+      outline: auto; 
+    }
+
+      .calculator-grid > button:hover {
+        background-color: #2f2e81;
+      }
+
+      .span-two {
+        grid-column: span 2;
+        color: #c91313;
+        background-color: rgba(61, 174, 202, 0.8);
+      }
+
+      .output{
+        grid-column: 1 / -1;
+        background-color: rgba(214, 211, 211, 0.75);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .output .previous-operand{
+        color: rgba(255,255, 255, 0.75);
+        font-size: 1.5rem;
+      }
+
+      .output .current-operand{
+        color: white;
+        font-size: 2.5rem;
+      }
